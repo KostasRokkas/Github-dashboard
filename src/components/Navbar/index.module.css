@@ -1,0 +1,49 @@
+.Navbar {
+    background-color: rgb(149, 86, 149);
+    padding: 0.7rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    overflow: auto;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.links {
+    display: grid;
+    overflow: auto;
+    justify-content: right;
+}
+
+.Link {
+    display: grid;
+    width:max-content;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.Link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.active {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+} 
+
+@media screen and (min-width: 450px) {
+    .Navbar {
+        position: fixed;
+        height: 100vh;
+    }
+}
+
+
+

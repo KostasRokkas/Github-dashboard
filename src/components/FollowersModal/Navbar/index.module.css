@@ -1,0 +1,69 @@
+ .Navbar {
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    background-color: rgb(149, 86, 149);
+    text-align: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    grid-gap: 1.35rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    overflow-x: hidden;
+    height:8rem;
+    align-items:center
+}
+
+.filters {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 0.25rem;
+    align-items: end;
+    justify-items: center;
+    padding: 0rem;
+    width: 100%;
+}
+
+.inputGroup {
+    display: grid;
+    grid-gap: 0.25rem;
+    width: 100%;
+    color:white;
+    font-weight: bold;;
+}
+
+.inputGroup input,
+.inputGroup select {
+    box-sizing: border-box;
+    height: calc(0.6rem * 2);
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.actions {
+    display: grid;
+    grid-gap: 0.2rem;
+}
+
+@media screen and (min-width: 559px) {
+    .Navbar {
+            grid-template-columns:  1fr max-content;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            grid-gap: 1.35rem;
+            /* min-height: 7vh; */
+            align-items: end;
+            height:6rem
+        }
+}
+
+@media screen and (min-width: 414px) {
+    .filters {
+            /* grid-template-columns: repeat(1, 1fr); */
+            align-items: end;
+        }
+} 
+
+
+
+
+

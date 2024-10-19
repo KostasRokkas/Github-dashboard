@@ -1,0 +1,205 @@
+@keyframes slidein {
+    from {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+    }
+}
+
+.RepositoriesModal {
+    display: grid;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    place-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+.modalCard {
+    position: relative;
+    display: grid;
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    max-height: 80vh;
+    max-width: 90vw;
+    overflow: auto;
+}
+
+.modalCardHeader {
+    border-bottom: 2px solid rgb(203, 124, 203);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0.7rem;
+    gap: 0.7rem;
+    font-size: x-large;
+    color: rgb(197, 87, 197);
+}
+
+
+.firstRow {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-Self: auto;
+}
+
+.sort {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem
+}
+
+.sort label {
+    font-weight: bold;
+}
+
+.sort select {
+    border: 3px solid rgb(203, 124, 203);
+    border-radius: 5px;
+    padding: 0.35rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.sort select:hover {
+    border-color: rgb(149, 86, 149);
+}
+
+.modalCardBody {
+    display: grid;
+    padding: 1.4rem;
+    min-height: 30vh;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.navbar {
+    display: grid;
+    padding: 1rem;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    gap: 1rem;
+    /* Space between cards */
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.cardCard:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    color: rgb(203, 124, 203);
+}
+
+.cardDescription {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.readMoreButton {
+    display: grid;
+    width: max-content;
+    background-color: rgb(203, 124, 203);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.readMoreButton:hover {
+    background-color: rgb(149, 86, 149);
+}
+
+.noData {
+    color: red;
+}
+
+.descriptionContainer {
+    display: grid;
+    justify-content: end
+}
+
+.readMoreButton {
+    display: grid;
+    width: max-content;
+}
+
+.stars{
+    color: rgb(149, 86, 149);
+    text-align: right;
+}
+
+.modalCardActions {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-auto-flow: column;
+    justify-content: end;
+    padding: 0.7rem;
+}
+
+button {
+    background-color: white;
+    color: rgb(203, 124, 203);
+    border-color: rgb(203, 124, 203);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: calc(0.35rem / 2) 0.35rem;
+    align-items: center;
+    width: max-content;
+    border: 1px solid rgb(203, 124, 203);
+    cursor: pointer;
+    width: 100%
+}
+
+@media screen and (min-width: 350px) {
+    .firstRow {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        justify-Self: auto;
+    }
+}
+
+/* Ensure that the grid is responsive */
+@media screen and (max-width: 900px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardContainer {
+        grid-template-columns: 1fr;
+        /* One column for mobile devices */
+    }
+}

@@ -1,0 +1,105 @@
+.UserProfile {
+    display: grid;
+    grid-template-rows: repeat(3, 8rem) 1fr max-content;
+    /* gap:3rem */
+}
+
+.noResult {
+    display:grid;
+    justify-content: center;
+    color:red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.totals {
+    display:grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-self:center;
+    padding: 0 1rem 0 1rem;
+    color:rgb(149, 86, 149);
+    font-weight: bold;
+}
+
+.body {
+    display: grid;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+}
+
+.headRow {
+    width: 100%;
+    background-color: rgb(149, 86, 149);
+    border-bottom: 2px solid green;
+}
+
+.headCell {
+    text-align: center;
+    padding: 0.35rem;
+    color: white;
+}
+
+.tableRow {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tableCell {
+    padding: 0.35rem;
+    color: black;
+}
+
+.avatarContainer {
+    display: grid;
+    justify-self: center;
+    padding: 2rem 1.5rem 1rem 1.5rem
+}
+
+.avatarImage {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatarTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.buttons {
+    display:grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, max-content);
+    gap:1rem;
+    padding:3rem;
+}
+
+.button {
+    background-color:rgb(203, 124, 203);
+        color:white;
+         border-radius: 5px;
+        font-weight: bold;
+        padding: calc(0.35rem / 2) 0.35rem;
+        align-items: center;
+        cursor: pointer;
+        width: 100% 
+}
+
+@media screen and (min-width: 589px) {
+     .buttons {
+         justify-content: center;
+         grid-template-columns: repeat(2, max-content);
+         gap:3rem
+     }
+.totals {
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    grid-gap: 5rem;
+}
+}
+
